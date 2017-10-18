@@ -1,0 +1,11 @@
+version: '2'
+services:
+
+  webapp:
+    build: .
+    ports:
+      - "80:9000"
+    restart: always
+    volumes:
+      - ./:/var/app/current
+      - ~/.ivy2/cache/:/root/.ivy2/cache/

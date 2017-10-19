@@ -1,4 +1,6 @@
 // The Play plugin
+logLevel := Level.Debug
+
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.6")
 
 // Play enhancer - this automatically generates getters/setters for public fields

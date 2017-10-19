@@ -11,4 +11,3 @@ update-ca-certificates -f
 
 cd /vagrant/
 ./sbt clean dependencies
-./sbt run

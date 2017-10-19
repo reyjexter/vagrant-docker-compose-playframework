@@ -6,6 +6,7 @@ services:
     ports:
       - "80:9000"
     restart: always
+    stdin_open: true
     volumes:
       - ./:/var/app/current
-      - ~/.ivy2/cache/:/root/.ivy2/cache/
+      - /root/.ivy2:/ivy2

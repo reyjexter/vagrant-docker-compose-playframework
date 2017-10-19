@@ -16,9 +16,9 @@ Vagrant.configure(2) do |config|
         group: "www-data",
         mount_options: ["dmode=777,fmode=777"]
 
+    config.vm.provision :docker
     config.vm.provision :shell, path: "bootstrap.sh"
-    #config.vm.provision :docker
-    #config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: false, project_name: "docker-play", run: "always"
+    config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", rebuild: false, project_name: "docker-play", run: "always"
 
     config.vm.network "forwarded_port", guest: 9000, host: 9000
     config.vm.network "forwarded_port", guest: 80, host: 8080
